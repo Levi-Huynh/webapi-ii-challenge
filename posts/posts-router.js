@@ -35,8 +35,55 @@ router.post('/', async (req, res) => {
     }
 });
 
+router.get('/:id', async (req, res)=> {
+    try{
+        const post = await Posts.findById(req.params.id);
+        if(post) {
+            res.status(200).json(post);
+        }else {
+            res.status(404).json({message: 'post not found'});
+        }
+    } catch (error) {
+      
+        res.status(500).json({
+          message: 'Error retrieving the post',
+        });
+      }
+});
 
+router.delete('/:id', async (req, res) => {
+    try{
+        const number = await Posts.remove(req.params.id);
+        if(number) {
+            res.status(200).json(number);
+        } else{
+            res.status(404).json({message: 'Post with the specified ID does not exist'});
+        }
+    }catch (error) {
+        res.status(500).json({
+            message: 'Post could not be moved'
+        });
+    }
+});
 
+router.put('/:id', async (req, res)=> {
+    try{
+        const {title, contents} =req.body
+        const post = await Posts.update(req.params.id, {title, contents});
+        if(!title || !contents) {
+            res.status(400).json({message: 'Please provide title and contents for the post.'})
+        } if(post) {
+            res.status(200).json(post);
+        }else {
+            res.status(404).json({message: "The post with specified ID does not exist"})
+        }
+
+       }catch (error) {
+        res.status(500).json({
+            message: 'Post could not be modified'
+        });
+    }
+});
 
 
 module.exports= router;
