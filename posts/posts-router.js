@@ -9,7 +9,7 @@ router.get('/', async (req, res) => {
     try{
         const posts = await Posts.find();
    
-        res.status(200).json(posts);
+        res.status(200).json(posts, {messageOfTheDay:process.env.MOTD });
     } catch (error) {
         res.status(500).json({
             message: 'The posts information could not be retrieved.'
