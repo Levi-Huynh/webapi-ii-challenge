@@ -10,9 +10,15 @@ server.use(express.json());
 
 server.use(cors());
 
-server.get('/', (req, res) => {
-
-    res.send(`<h2>Intro to Node.js Night 2</h2>`);
+server.get('/', async (req, res) => {
+  try {
+      const shoutouts = await postsRouter('shoutouts');
+    res.status(200).json({messageOfTheDay: process.env.MOTD, shoutouts
+  });
+  } catch (error) {
+    console.error('\nERROR', error);
+    res.status(500).json({ error: 'Cannot retrieve the shoutouts' });
+  }
 });
 
 server.use('/api/posts', postsRouter);
