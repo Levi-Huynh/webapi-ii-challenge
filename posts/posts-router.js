@@ -3,6 +3,7 @@ const express = require('express');
 const Posts = require('./db.js');
 const router = express.Router();
 
+//got mvp for deployment
 
 router.get('/', async (req, res) => {
  
