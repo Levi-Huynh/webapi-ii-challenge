@@ -4,7 +4,7 @@
 
   const postsRouter = require('./posts/posts-router.js');
 
-  const db = require('./data/db2.js');
+
 
 const server = express();
 
