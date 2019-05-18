@@ -35,8 +35,8 @@ import {LOGIN_START, LOGIN_SUCCESS, FETCH_DATA_START, FETCH_DATA_SUCCESS, FETCH_
         return {
           ...state,
           fetchingquote: false,
-          error: action.payload.data.error,
-          errorStatusCode: action.payload.status
+          error: action.payload,
+          errorStatusCode: null
         };  
         
         default:

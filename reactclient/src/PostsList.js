@@ -44,5 +44,5 @@ class PostsLists extends React.Component {
   
   export default connect(
    (mstp), {getData: getData}
-  )(PostsList);
+  )(PostsLists);
   
