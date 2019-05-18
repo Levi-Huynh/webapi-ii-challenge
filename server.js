@@ -7,7 +7,7 @@
 
 
 const server = express();
-
+const path = require('path');
 server.use(express.json());
 
 server.use(cors());
