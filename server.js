@@ -11,7 +11,7 @@ const server = express();
 server.use(express.json());
 
 server.use(cors());
-app.use(express.static(path.join(__dirname, 'reactclient/build')));
+server.use(express.static(path.join(__dirname, 'reactclient/build')));
 
 
 
@@ -24,7 +24,7 @@ server.get('/', async (req, res) => {
   }
 });
 
-app.get('*', (req, res) => {
+server.get('*', (req, res) => {
   res.sendFile(path.join(__dirname+'/reactclient/build/index.html'));
 });
 
