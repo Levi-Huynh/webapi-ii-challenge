@@ -8,11 +8,11 @@ export const getData = () => dispatch => {
   return axios
     .get('http://localhost:4000/api/posts')
     .then(res => {
-        console.log(res);
+        console.log("get", res.data);
       dispatch({ type: FETCH_DATA_SUCCESS, payload: res.data });
     })
     .catch(err => {
-      console.log(err.response);
-      dispatch({ type: FETCH_DATA_FAILURE, payload: err.response });
+      console.log(err);
+      dispatch({ type: FETCH_DATA_FAILURE, payload: err.reponse });
     });
 };

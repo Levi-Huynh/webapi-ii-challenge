@@ -28,7 +28,7 @@ import {LOGIN_START, LOGIN_SUCCESS, FETCH_DATA_START, FETCH_DATA_SUCCESS, FETCH_
           error: '',
           errorStatusCode: null,
           fetchingquote: false,
-          message: action.payload
+         quotes: action.payload
         
         };
       case FETCH_DATA_FAILURE:

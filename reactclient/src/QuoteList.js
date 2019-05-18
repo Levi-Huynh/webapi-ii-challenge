@@ -1,17 +1,19 @@
 import React from "react";
 import { connect } from "react-redux";
+import  './quote.css';
 import Quote from './Quote';
 
-
 const QuoteList = props => {
-  if(!props.quote){return <h1>Loading</h1>}
+  if(!props.quotes){return <h1>Loading</h1>}
   return (
-    <ul>
-      {props.quote.map(quote => {
-        return <Quote key={quote.name} quote={quote} />;
+     
+<div>
+
+      {props.quotes.map(quote => {
+        return <Quote key={quote.title} quote={quote} />;
       })}
-    </ul>
- 
+
+ </div>
   );
 };
 

@@ -11,8 +11,8 @@ const path = require('path');
 server.use(express.json());
 
 server.use(cors());
+// server.use(express.static(path.join(__dirname, 'reactclient/build')));
 server.use(express.static(path.join(__dirname, 'reactclient/build')));
-
 
 
 server.get('/', async (req, res) => {
@@ -24,9 +24,15 @@ server.get('/', async (req, res) => {
   }
 });
 
+
+server.use('/api/posts', postsRouter);
+
 server.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/reactclient/build/index.html'));
+  res.sendFile(path.join(__dirname + '/reactclient/build/index.html'));
 });
+
+//   res.sendFile(path.join(__dirname + '/reactclient/build/index.html'));
+// });
 
 
 // server.post('/', async (req, res) => {
@@ -41,6 +47,5 @@ server.get('*', (req, res) => {
 //   }
 // });
 
-server.use('/api/posts', postsRouter);
 
 module.exports = server;

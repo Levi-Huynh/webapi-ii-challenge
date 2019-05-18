@@ -22,12 +22,15 @@ class PostsLists extends React.Component {
         // return something here to indicate that you are fetching data
     
       return (
-        <div className="CharactersList_wrapper">
+        <div >
+      
            {this.props.fetchingquote? <h1>Loading</h1> : null}
-        {console.log(typeof this.props.quotes)}
+        {console.log("Props", this.props.quotes)}
+
           <QuoteList quotes={this.props.quotes} />
           {/* <UpdateFriendContainer friends={this.props.friends}/> */}
         </div>
+     
       );
     }
   }

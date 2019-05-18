@@ -1,15 +1,22 @@
 import React from "react";
+import './quote.css';
 
 const Quote = props => {
   return  (
-    <div>
-  <li>{props.quote.title} </li>
-  <li>{props.quote.contents}</li>  
-  <li>{props.quote.created_at}</li>
-  <li>{props.quote.updated_at}</li>
+   
+    <div className="card">
+     
+<h3 className="card-header"> {props.quote.title}</h3>
 
-              
-                </div>
+    <div className="main-description">
+<p >{props.quote.contents}</p>
+<p >Created at {props.quote.created_at}</p>
+<p >Updated at {props.quote.updated_at}</p>
+</div>
+</div>
+
+           
+               
   
   )
 };
