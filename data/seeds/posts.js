@@ -5,47 +5,47 @@ exports.seed = function(knex, Promise) {
       return knex('posts').insert([
         {
           title:
-            'I wish the ring had never come to me. I wish none of this had happened.',
-          contents: 'Guess who said this',
+            'DJANGO',
+          contents: 'A free, open source, web application framework written in Python which follows the model-view-controller (MVC) framework.',
         },
         {
-          title: 'I think we should get off the road. Get off the road! Quick!',
-          contents: 'Guess who said this',
-        },
-        {
-          title:
-            "I made a promise, Mr Frodo. A promise. \"Don't you leave him Samwise Gamgee.\" And I don't mean to. I don't mean to.",
-          contents: 'Guess who said this',
+          title: 'DEPLOYMENT',
+          contents: 'Software deployment is all of the activities that make a software system available for use.',
         },
         {
           title:
-            " N-nothing important. That is, I heard a great deal about a ring, a Dark Lord, and something about the end of the world, but... Please, Mr. Gandalf, sir, don't hurt me. Don't turn me into anything... unnatural.",
-          contents: 'Guess who said this',
+            "EXPRESS.JS",
+          contents: 'Express.js is a Node.js web application server framework, designed for building single-page, multi-page, and hybrid web applications.',
         },
         {
           title:
-            'You need people of intelligence on this sort of mission...quest...thing.',
-          contents: 'Guess who said this',
+            " FRAMEWORK",
+          contents: 'A framework is often a layered structure indicating what kind of programs can or should be built and how they would interrelate.',
         },
         {
           title:
-            'All you have to do is decide what to do with the time that is given to you.',
-          contents: 'Guess who said this',
+            'GIT/GITHUB',
+          contents: 'A micro web application framework written in Python and based on the Werkzeug toolkit and Jinja2 template engine.',
         },
         {
           title:
-            'Do not be so quick to deal out death and judgement. Even the very wise do not see all ends.',
-          contents: 'Guess who said this',
+            'HTTP REQUEST',
+          contents: 'HyperText Transfer Protocol is an application protocol for distributed, collaborative, hypermedia information systems. HTTP is the foundation of data communication for the World Wide Web.',
         },
         {
           title:
-            ' Fool of a Took! Throw yourself in next time and rid us of your stupidity!',
-          contents: 'Guess who said this',
+            'JQUERY',
+          contents: 'jQuery is a cross-platform JavaScript library designed to simplify the client-side scripting of HTML.',
         },
         {
           title:
-            'I will be dead before I see the ring in the hands of an elf! Never trust an elf!',
-          contents: 'Guess who said this',
+            ' LINUX',
+          contents: 'Linux is a unix-like computer operating system assembled under the model of free and open-source software development and distribution.',
+        },
+        {
+          title:
+            'LOCAL STORAGE',
+          contents: 'The data placed in local storage is per origin (the combination of protocol, hostname, and port number as defined in the same-origin policy).',
         },
       ]);
     });
