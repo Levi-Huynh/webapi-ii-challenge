@@ -11,6 +11,9 @@ const server = express();
 server.use(express.json());
 
 server.use(cors());
+app.use(express.static(path.join(__dirname, 'reactclient/build')));
+
+
 
 server.get('/', async (req, res) => {
   try {
@@ -20,6 +23,11 @@ server.get('/', async (req, res) => {
     res.status(500).json({ error: 'Cannot retrieve the shoutouts' });
   }
 });
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/reactclient/build/index.html'));
+});
+
 
 // server.post('/', async (req, res) => {
 //   try {
