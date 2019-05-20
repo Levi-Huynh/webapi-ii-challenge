@@ -3,9 +3,10 @@ import {LOGIN_START, LOGIN_SUCCESS, FETCH_DATA_START, FETCH_DATA_SUCCESS, FETCH_
 
     const initialState = {
      quotes: [],
+     actions:[],
         loggingIn: false,
         error: "",
-        
+        fetchingaction: false,
         deletingquote: false,
        fetchingquote: false,
        savingquote: false,

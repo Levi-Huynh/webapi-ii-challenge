@@ -24,7 +24,7 @@ export const FETCH_ACTION_FAILURE = 'FETCH_ACTIONS_FAILURE';
 export const getActions = (id) => dispatch => {
   dispatch({ type: FETCH_ACTION_START });
   return axios
-    .get(`https://project-task-planner.herokuapp.com/api/project/${id}/action`)
+    .get(`https://levi-webpapi-ii-challenge.herokuapp.com/api/posts/${id}`)
     .then(res => {
         console.log("get", res.data);
       dispatch({ type: FETCH_ACTION_SUCCESS, payload: res.data });
