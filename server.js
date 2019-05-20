@@ -1,13 +1,13 @@
 
   const express = require('express');
   const cors = require('cors');
-
+  const path = require('path');
   const postsRouter = require('./posts/posts-router.js');
 
 
 
 const server = express();
-const path = require('path');
+
 server.use(express.json());
 
 server.use(cors());
